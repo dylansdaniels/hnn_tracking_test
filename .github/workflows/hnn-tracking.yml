@@ -2,24 +2,23 @@ on:
   schedule:
     # Run this once per day, towards the end of the day for keeping the most
     # recent data point most meaningful (hours are interpreted in UTC).
-    - cron: "21 23 * * *"
+    - cron: "30 23 * * *"
   workflow_dispatch: # Allow for running this manually.
 
 jobs:
   j1:
-    name: hnn-tracking
+    name: github-repo-stats
     runs-on: ubuntu-latest
     steps:
-      - name: run-ghrs
+      - name: GHRS
         uses: jgehrcke/github-repo-stats@HEAD
         with:
-          # Define the stats repository (the repo to fetch
-          # stats for and to generate the report for).
-          # Remove the parameter when the stats repository
-          # and the data repository are the same.
+          ghpagesprefix: https://jgehrcke.github.io/ghrs-test
+          # Define the target repository, the repo to fetch
+          # stats for and to generate the report for.
           repository: jonescompneurolab/hnn
-          # Set a GitHub API token that can read the stats
-          # repository, and that can push to the data
-          # repository (which this workflow file lives in),
-          # to store data and the report files.
+          # Required token privileges: Can read the target
+          # repo, and can push to the repository this
+          # workflow file lives in (to store data and
+          # the report files).
           ghtoken: ${{ secrets.ghrs_github_api_token }}
