@@ -13,6 +13,7 @@ jobs:
       - name: run-ghrs
         uses: jgehrcke/github-repo-stats@HEAD
         with:
+          ghpagesprefix: https://dylansdaniels.github.io/hnn_tracking_test/
           # Define the stats repository (the repo to fetch
           # stats for and to generate the report for).
           # Remove the parameter when the stats repository
