@@ -6,3 +6,5 @@
 
 **Latest report PDF**: [report.pdf](https://github.com/dylansdaniels/hnn_tracking_test/raw/main/jonescompneurolab/hnn/latest-report/report.pdf)
 
+
+**Latest report HTML via GitHub pages**: [report.html](https://dylansdaniels.github.io/hnn_tracking_test//jonescompneurolab/hnn/latest-report/report.html)
